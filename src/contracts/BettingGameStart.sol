@@ -1,4 +1,4 @@
-pragma solidity 0.6.6;
+pragma solidity ^0.6.7;
 
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 
@@ -48,6 +48,7 @@ contract RandomNumberConsumer is VRFConsumerBase {
         internal
         override
     {
+        require(requestId >= 0, "Must have a valid request id.");
         randomResult = randomness;
     }
 }

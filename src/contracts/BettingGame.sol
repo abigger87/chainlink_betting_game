@@ -5,9 +5,9 @@
  *     - Rinkeby LINK faucet: https://rinkeby.chain.link/
  */
 
-pragma solidity 0.6.6;
+pragma solidity ^0.6.7;
 
-import "https://raw.githubusercontent.com/smartcontractkit/chainlink/master/evm-contracts/src/v0.6/VRFConsumerBase.sol";
+import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 
 contract BettingGame is VRFConsumerBase {
     uint256 internal fee;
